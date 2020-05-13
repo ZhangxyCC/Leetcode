@@ -1,0 +1,3 @@
+这道题比较常规，需要一个visited数组记录visited[i][j]是否被访问过，用DFS进行搜索+backtracking
+
+为了节省时间，只要有一个方向搜索到了给定的word就立即返回true. Leetcode discussion中讲到一种节省空间的方法：不用visited数组，而用bit manipulation来判断board[i][j]是否被访问过
