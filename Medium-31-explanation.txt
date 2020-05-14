@@ -1,0 +1,13 @@
+我们称 3,2,1是一个max permutation。
+举例：在 5,3,7,6,1中 末尾的7,6,1是一个max permutation了，对于5,3,7,6,1 我们需要考虑的是3,7,6,1的next permutation， 只有在3,7,6,1成为7,6,3,1的时候才会再考虑5,7,6,3,1的next permutation. 也就是说，我们是从最高位开始考虑的。
+
+1. Find the largest index k such that nums[k] < nums[k + 1]. If no such index , just reverse
+当7，6，1是一个max permutation的时候，找到除7,6,k=1 nums[k] = 3的时候，如果整个数组都已经是max permutaiton了，也就是说整个数组都是逆序，那我们直接reverse数组即可。
+
+2. Find the largest index l > k such that nums[k] < nums[l]
+接下来我们需要找到3右边的max permutation中比3略大一点的值。所以从右往左开始找，找到6.所以l = 4
+3. Swap nums[k] and nums[l]
+
+
+4. Reverse the sub-array nums[k + 1:]
+将nums[k] 与nums[l] 交换之后，数组变成了 5，6，7，3，1，nums[k + 1:]仍然是一个max permutation的状态。但是我们需要逆置 nums[k + 1:]，使其成为min permutaiton. 这样才能让它成为原数组的next permutation.
