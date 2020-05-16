@@ -1,0 +1,6 @@
+这道题是#53的扩展题，lee大神在discussion中讲解的很详细了。max sum subarray出现的位置有两种情况，一种是在array中间出现，
+另一种是array末尾和头部拼接的情况，在这种情况下，array的中部成了min sum subarray。 因此只要比较max sum subarray 以及 
+total sum - min sum subarray 哪个大就好了。
+
+特殊情况是如果整个array都是负数，那么比较max sum subarray 以及 total sum - min sum subarray的大小是不对的，这样永远会返回0，
+因为max sum subarray = max(A), min sum subarray = total sum. 所以在这种情况下直接返回 max sum subarray即可。
