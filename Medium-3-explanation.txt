@@ -1,0 +1,2 @@
+可用双指针来解决。同时需要一个hashmap来记录不同的character和其index. 当end指到了一个已经出现过的字母，那么我们移动start指针使其大于出现过的字母的index。还有一种情况是如果index < start，那么不需要移动start。
+也就是说start永远都是向右移动的，而不会左右来回移动。我们通过移动start和end指针使在[start, end] 中的字母都是不重复的。
