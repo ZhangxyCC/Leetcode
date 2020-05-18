@@ -1,0 +1,4 @@
+如果每个function都需要O(1)的时间复杂度，那么肯定需要hashmap来快速进行索引。我们建立key为key，value为Node的hashmap，并且使用双向
+链表来增加、删除和移动来达到O(1)的复杂度。
+在get和put function的实现中，有一些子步骤是相同的，比如删除node,加入node。移动node的步骤其实也是这两种。所以我们用一些helper function来
+实现代码复用。
