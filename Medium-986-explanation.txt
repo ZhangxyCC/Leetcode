@@ -1,0 +1,1 @@
+two pointers. A和B各用一个Pointer, 比较两个pointers指向的segment，如果segment没有交集，则移动pointer,如果有，则取交集
